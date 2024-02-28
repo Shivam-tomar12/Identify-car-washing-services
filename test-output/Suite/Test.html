@@ -1,0 +1,179 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>20/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Feb 28 10:52:31 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>112 seconds (112143 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td>regression smoke </td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestNg.CarwashingServices.getting_the_all_car_washing_service_provider_details()'><b>getting_the_all_car_washing_service_provider_details</b><br>Test class: TestNg.CarwashingServices</td>
+<td></td>
+<td>39</td>
+<td>TestNg.CarwashingServices@54c5a2ff</td></tr>
+<tr>
+<td title='TestNg.FreelistingScenario.user_visit_on_the_justdial_home_page()'><b>user_visit_on_the_justdial_home_page</b><br>Test class: TestNg.FreelistingScenario</td>
+<td></td>
+<td>4</td>
+<td>TestNg.FreelistingScenario@5b1669c0</td></tr>
+<tr>
+<td title='TestNg.FreelistingScenario.enter_the_near_by_location()'><b>enter_the_near_by_location</b><br>Test class: TestNg.FreelistingScenario</td>
+<td></td>
+<td>0</td>
+<td>TestNg.FreelistingScenario@5b1669c0</td></tr>
+<tr>
+<td title='TestNg.CarwashingServices.enter_the_nearest_location()'><b>enter_the_nearest_location</b><br>Test class: TestNg.CarwashingServices</td>
+<td></td>
+<td>0</td>
+<td>TestNg.CarwashingServices@54c5a2ff</td></tr>
+<tr>
+<td title='TestNg.CarwashingServices.validate_the_title_of_the_webpage()'><b>validate_the_title_of_the_webpage</b><br>Test class: TestNg.CarwashingServices</td>
+<td></td>
+<td>0</td>
+<td>TestNg.CarwashingServices@54c5a2ff</td></tr>
+<tr>
+<td title='TestNg.Gym.click_on_the_gym_button()'><b>click_on_the_gym_button</b><br>Test class: TestNg.Gym</td>
+<td></td>
+<td>0</td>
+<td>TestNg.Gym@78e4deb0</td></tr>
+<tr>
+<td title='TestNg.FreelistingScenario.validate_the_free_listing_webpage()'><b>validate_the_free_listing_webpage</b><br>Test class: TestNg.FreelistingScenario</td>
+<td></td>
+<td>0</td>
+<td>TestNg.FreelistingScenario@5b1669c0</td></tr>
+<tr>
+<td title='TestNg.FreelistingScenario.validating_the_error_message()'><b>validating_the_error_message</b><br>Test class: TestNg.FreelistingScenario</td>
+<td></td>
+<td>0</td>
+<td>TestNg.FreelistingScenario@5b1669c0</td></tr>
+<tr>
+<td title='TestNg.FreelistingScenario.user_enter_the_wrong_number()'><b>user_enter_the_wrong_number</b><br>Test class: TestNg.FreelistingScenario</td>
+<td></td>
+<td>0</td>
+<td>TestNg.FreelistingScenario@5b1669c0</td></tr>
+<tr>
+<td title='TestNg.Gym.store_the_list_of_submenu_and_display()'><b>store_the_list_of_submenu_and_display</b><br>Test class: TestNg.Gym</td>
+<td></td>
+<td>2</td>
+<td>TestNg.Gym@78e4deb0</td></tr>
+<tr>
+<td title='TestNg.Gym.scrollto()'><b>scrollto</b><br>Test class: TestNg.Gym</td>
+<td></td>
+<td>0</td>
+<td>TestNg.Gym@78e4deb0</td></tr>
+<tr>
+<td title='TestNg.Gym.display_all_the_submenu_content()'><b>display_all_the_submenu_content</b><br>Test class: TestNg.Gym</td>
+<td></td>
+<td>3</td>
+<td>TestNg.Gym@78e4deb0</td></tr>
+<tr>
+<td title='TestNg.FreelistingScenario.user_click_on_the_free_listing_button()'><b>user_click_on_the_free_listing_button</b><br>Test class: TestNg.FreelistingScenario</td>
+<td></td>
+<td>1</td>
+<td>TestNg.FreelistingScenario@5b1669c0</td></tr>
+<tr>
+<td title='TestNg.CarwashingServices.give_the_proper_data_and_search()'><b>give_the_proper_data_and_search</b><br>Test class: TestNg.CarwashingServices</td>
+<td></td>
+<td>0</td>
+<td>TestNg.CarwashingServices@54c5a2ff</td></tr>
+<tr>
+<td title='TestNg.CarwashingServices.applying_the_filter_as_per_description()'><b>applying_the_filter_as_per_description</b><br>Test class: TestNg.CarwashingServices</td>
+<td></td>
+<td>1</td>
+<td>TestNg.CarwashingServices@54c5a2ff</td></tr>
+<tr>
+<td title='TestNg.FreelistingScenario.click_on_the_start_now_button()'><b>click_on_the_start_now_button</b><br>Test class: TestNg.FreelistingScenario</td>
+<td></td>
+<td>0</td>
+<td>TestNg.FreelistingScenario@5b1669c0</td></tr>
+<tr>
+<td title='TestNg.Gym.location()'><b>location</b><br>Test class: TestNg.Gym</td>
+<td></td>
+<td>0</td>
+<td>TestNg.Gym@78e4deb0</td></tr>
+<tr>
+<td title='TestNg.CarwashingServices.visit_on_the_justdial_page()'><b>visit_on_the_justdial_page</b><br>Test class: TestNg.CarwashingServices</td>
+<td></td>
+<td>5</td>
+<td>TestNg.CarwashingServices@54c5a2ff</td></tr>
+<tr>
+<td title='TestNg.CarwashingServices.click_on_the_apply_filter_button()'><b>click_on_the_apply_filter_button</b><br>Test class: TestNg.CarwashingServices</td>
+<td></td>
+<td>1</td>
+<td>TestNg.CarwashingServices@54c5a2ff</td></tr>
+<tr>
+<td title='TestNg.Gym.Homepage()'><b>Homepage</b><br>Test class: TestNg.Gym</td>
+<td></td>
+<td>5</td>
+<td>TestNg.Gym@78e4deb0</td></tr>
+</table><p>
+</body>
+</html>
