@@ -33,3 +33,26 @@
 16:26:36.612 [main] INFO  factory.BaseClass - *******Scroll to gym*******
 16:26:36.946 [main] INFO  factory.BaseClass - *******click on the gym button*******
 16:26:41.456 [main] INFO  factory.BaseClass - *******Getting the details of submenu*******
+17:40:35.022 [main] INFO  factory.BaseClass - *******Navigate to the Justdial homePage*******
+17:40:39.309 [main] INFO  factory.BaseClass - *******Validate the title*******
+17:40:39.854 [main] INFO  factory.BaseClass - *******Set the location*******
+17:40:40.717 [main] INFO  factory.BaseClass - ******Enter the Car washing services and search********
+17:40:41.957 [main] INFO  factory.BaseClass - ******Click apply********
+17:40:43.990 [main] INFO  factory.BaseClass - *******Applying the filter*******
+17:41:18.826 [main] INFO  factory.BaseClass - *******Getting the details of services*******
+17:41:22.422 [main] INFO  factory.BaseClass - *******Navigate to the free Listing page*******
+17:41:22.873 [main] INFO  factory.BaseClass - *******Validate the free listing page*******
+17:41:23.191 [main] INFO  factory.BaseClass - *******Enter the wrong number*******
+17:41:23.779 [main] INFO  factory.BaseClass - *******Validating the error message*******
+17:41:25.590 [main] INFO  factory.BaseClass - *******Navigate to the justdial homepage*******
+17:41:27.023 [main] INFO  factory.BaseClass - *******Get the location*******
+17:41:27.394 [main] INFO  factory.BaseClass - *******Scroll to gym*******
+17:41:27.774 [main] INFO  factory.BaseClass - *******click on the gym button*******
+17:41:32.555 [main] INFO  factory.BaseClass - *******Getting the details of submenu*******
+18:09:17.264 [main] INFO  factory.BaseClass - *******Navigate to the Justdial homePage*******
+18:09:20.868 [main] INFO  factory.BaseClass - *******Validating the title*******
+18:09:22.373 [main] INFO  factory.BaseClass - *******Get the location*******
+18:09:24.145 [main] INFO  factory.BaseClass - *******Enter the Car washing services and search*******
+18:09:28.537 [main] INFO  factory.BaseClass - *******Apply the filter*******
+18:09:29.042 [main] INFO  factory.BaseClass - *******Getting the details of services*******
+18:11:12.896 [main] INFO  factory.BaseClass - *******Navigate to the Justdial homePage*******
