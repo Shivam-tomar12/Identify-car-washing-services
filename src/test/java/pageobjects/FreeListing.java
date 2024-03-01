@@ -47,6 +47,14 @@ public class FreeListing extends BasePage {
 		Searchbtn.click();
 	}
 	
+	public void Homepage() {
+		driver.navigate().back();
+	}
+	
+	public static  WebDriver getDri() {
+		return driver;
+	}
+	
 	
 	public String getErrorMsg() {
 		String errormsg = error.getText();

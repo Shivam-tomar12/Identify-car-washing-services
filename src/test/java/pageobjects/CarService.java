@@ -54,6 +54,16 @@ public class CarService extends BasePage{
         
 	}
 	
+	public void homepage() {
+		driver.navigate().back();
+		
+	}
+	
+	public static  WebDriver getDri() {
+		return driver;
+	}
+	
+	
 	public void getDetails() throws InterruptedException, IOException {
 		
 		String s = null,p = null, v= null;

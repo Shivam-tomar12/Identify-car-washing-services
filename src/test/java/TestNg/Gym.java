@@ -3,8 +3,9 @@ package TestNg;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-
+import factory.BaseClass;
 import factory.testngBase;
+import pageobjects.FreeListing;
 import pageobjects.GymPage;
 import pageobjects.HomePage;
 
@@ -12,12 +13,15 @@ public class Gym extends testngBase{
 	
 	HomePage H;
 	GymPage G;
+	FreeListing F;
 	
 	@Test(priority=1,groups = {"smoke","regression"})
 	public void Homepage() {
 		
-		H = new HomePage(testngBase.getDri());
-		H.handleADD();
+		
+		H = new HomePage(FreeListing.getDri());
+		//H.handleADD();
+		BaseClass.getlogger().info("*******Navigate to the justdial homepage*******");
 	}
 	
 	
@@ -25,6 +29,7 @@ public class Gym extends testngBase{
 	public void location() {
 		H = new HomePage(testngBase.getDri());
 	    H.setLocation();
+	  BaseClass.getlogger().info("*******Get the location*******");
 	}
 
 
@@ -33,6 +38,7 @@ public class Gym extends testngBase{
 		H = new HomePage(testngBase.getDri());
 		
 		H.scrolldown();
+		BaseClass.getlogger().info("*******Scroll to gym*******");
 	}
 
 	@Test(priority=5,groups = {"smoke","regression"})
@@ -40,6 +46,7 @@ public class Gym extends testngBase{
 		H = new HomePage(testngBase.getDri());
 		
 	   H.gymClick();
+	 BaseClass.getlogger().info("*******click on the gym button*******");
 	}
 
 	@Test(priority=6,groups = {"regression"})
@@ -53,6 +60,7 @@ public class Gym extends testngBase{
 	public void display_all_the_submenu_content() {
 		
 		G.menuDetails();
+		BaseClass.getlogger().info("*******Getting the details of submenu*******");
 	   
 	}
 

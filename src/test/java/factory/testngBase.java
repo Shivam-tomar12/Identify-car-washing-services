@@ -22,7 +22,9 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
 import org.apache.logging.log4j.LogManager;//log4j
@@ -39,7 +41,7 @@ public class testngBase {
 	static EdgeOptions options1=new EdgeOptions();
 	
 	
-	@BeforeClass(groups= {"smoke","regression"})
+	@BeforeTest(groups= {"smoke","regression"})
 	@Parameters({"browser"})
 	public static WebDriver setup(String br) throws IOException
 	
@@ -49,8 +51,41 @@ public class testngBase {
 		 p=new Properties();
 		 p.load(file);
 		
+			
+		 if(p.getProperty("execution_env").equalsIgnoreCase("remote"))
+			{
+				DesiredCapabilities capabilities = new DesiredCapabilities();
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--disable-blink-features=AutomationControlled");
+				options1.addArguments("--disable-blink-features=AutomationControlled");
 				
+				//os
+				if (p.getProperty("os").equalsIgnoreCase("windows")) {
+					options.addArguments("--disable-blink-features=AutomationControlled");
+				    capabilities.setPlatform(Platform.WIN11);
+				} else if (p.getProperty("os").equalsIgnoreCase("mac")) {
+					options.addArguments("--disable-blink-features=AutomationControlled");
+				    capabilities.setPlatform(Platform.MAC);
+				} else {
+				    System.out.println("No matching OS..");
+				      }
+				//browser
+				switch (p.getProperty("browser").toLowerCase()) {
+				    case "chrome":
+				    	capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+				        capabilities.setBrowserName("chrome");
+				        break;
+				    case "edge":
+				    	capabilities.setCapability(EdgeOptions.CAPABILITY, options1);
+				        capabilities.setBrowserName("MicrosoftEdge");
+				        break;
+				    default:
+				        System.out.println("No matching browser");
+				     }
+		       
+		        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),capabilities);
 				
+			}	
 		
 		 if(p.getProperty("execution_env").equalsIgnoreCase("local"))
 		{
@@ -81,7 +116,7 @@ public class testngBase {
 	
 	
 	
-	@AfterClass(groups= {"smoke","regression"})
+	@AfterTest(groups= {"smoke","regression"})
 	public void tearDown()
 	{
 		driver.quit();
@@ -104,13 +139,7 @@ public class testngBase {
 		return generatedString;
 	}
 	
-	public String randomAlphaNumeric()
-	{
-		String str=RandomStringUtils.randomAlphabetic(3);
-		String num=RandomStringUtils.randomNumeric(3);
-		
-		return (str+"@"+num);
-	}
+	
 	
 	public String captureScreen(String tname) throws IOException {
 
@@ -119,7 +148,7 @@ public class testngBase {
 		TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
 		File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
 		
-		String targetFilePath=System.getProperty("user.dir")+"\\screenshots\\" + tname + "_" + timeStamp + ".png";
+		String targetFilePath=System.getProperty("user.dir")+"\\Testngreport\\screenshots\\" + tname + "_" + timeStamp + ".png";
 		File targetFile=new File(targetFilePath);
 		
 		sourceFile.renameTo(targetFile);

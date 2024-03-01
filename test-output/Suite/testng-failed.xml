@@ -13,14 +13,42 @@
       </run>
     </groups>
     <classes>
+      <class name="TestNg.Gym">
+        <methods>
+          <include name="store_the_list_of_submenu_and_display"/>
+          <include name="click_on_the_gym_button"/>
+          <include name="scrollto"/>
+          <include name="display_all_the_submenu_content"/>
+          <include name="tearDown"/>
+          <include name="location"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestNg.Gym -->
       <class name="TestNg.CarwashingServices">
         <methods>
+          <include name="applying_the_filter_as_per_description"/>
+          <include name="give_the_proper_data_and_search"/>
+          <include name="getting_the_all_car_washing_service_provider_details"/>
+          <include name="click_on_the_apply_filter_button"/>
           <include name="validate_the_title_of_the_webpage"/>
           <include name="visit_on_the_justdial_page"/>
           <include name="tearDown"/>
+          <include name="enter_the_nearest_location"/>
           <include name="setup"/>
         </methods>
       </class> <!-- TestNg.CarwashingServices -->
+      <class name="TestNg.FreelistingScenario">
+        <methods>
+          <include name="validate_the_free_listing_webpage"/>
+          <include name="user_enter_the_wrong_number"/>
+          <include name="click_on_the_start_now_button"/>
+          <include name="user_click_on_the_free_listing_button"/>
+          <include name="validating_the_error_message"/>
+          <include name="tearDown"/>
+          <include name="enter_the_near_by_location"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- TestNg.FreelistingScenario -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

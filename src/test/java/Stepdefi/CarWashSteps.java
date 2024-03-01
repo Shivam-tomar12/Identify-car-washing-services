@@ -41,16 +41,18 @@ public class CarWashSteps {
 	
 	@When("Enter the nearest location")
 	public void enter_the_nearest_location() throws IOException {
-		BaseClass.getlogger().info("*******Get the location*******");
+		
 	    H.setLocation();
 	    BaseClass.ScreenShots("Location.png");
+	    BaseClass.getlogger().info("*******Get the location*******");
 	}
 
 	@When("give the proper data and search")
 	public void give_the_proper_data_and_search() throws IOException {
-		BaseClass.getlogger().info("*******Enter the Car washing services and search*******");
+		
 		H.Search();
 		BaseClass.ScreenShots("Services.png");
+		BaseClass.getlogger().info("*******Enter the Car washing services and search*******");
 	    
 	}
 	
@@ -63,9 +65,10 @@ public class CarWashSteps {
 	
 	@When("applying the filter as per description")
 	public void applying_the_filter_as_per_description() throws IOException {
-		BaseClass.getlogger().info("*******Applying the filter*******");
+		
 		BaseClass.ScreenShots("filter.png");
 		c.applyFilter();
+		BaseClass.getlogger().info("*******Apply the filter*******");
 		
 		    
 	}
