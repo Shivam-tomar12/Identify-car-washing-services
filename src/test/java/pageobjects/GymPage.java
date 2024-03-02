@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -70,7 +71,9 @@ public class GymPage extends BasePage {
             }
             if (Text.contains("Ratings")) {
             	System.out.println("-------------Ratings Dropdown----------");
-            	subMenu.get(i).click();
+            	JavascriptExecutor executor = (JavascriptExecutor)driver;
+            	executor.executeScript("arguments[0].click();", subMenu.get(i));
+            	//subMenu.get(i).click();
                 for(int j =0; j<drpDown.size(); j++) {
                 		String s = drpDown.get(j).getText();
                 		System.out.println(s);
