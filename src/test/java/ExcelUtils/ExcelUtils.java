@@ -36,10 +36,10 @@ public class ExcelUtils {
 
 
 public static void writeExcelData1(String sheetName, int rownum, int colnum, int c) throws IOException {
-	//Opening the excel file
+	
 	FileInputStream file=new FileInputStream(System.getProperty("user.dir")+"\\Excel\\Book1.xlsx");
 	XSSFWorkbook book=new XSSFWorkbook(file); 
-	//Creating the sheet
+	
 	if(book.getSheetIndex(sheetName)==-1) {
 	book.createSheet(sheetName);              
 	}
@@ -47,11 +47,11 @@ public static void writeExcelData1(String sheetName, int rownum, int colnum, int
 	if(sheet.getRow(rownum)==null)
 	sheet.createRow(rownum);
 	XSSFRow row =sheet.getRow(rownum);   
-	// Creating cell
+	
 	XSSFCell cell=row.createCell(colnum); 
-	//Setting the data in the column
+	
 	cell.setCellValue(c); 
-	// Writing the data by fileOutput
+	
 	FileOutputStream fo=new FileOutputStream(System.getProperty("user.dir")+"\\Excel\\Book1.xlsx");
 	book.write(fo);
 	book.close();

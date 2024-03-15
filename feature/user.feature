@@ -8,7 +8,7 @@ Feature: Car wash
     When Click on the apply filter button
     And applying the filter as per description
     Then Getting the all car washing service provider details
-    
+   
     
 	Scenario Outline: Free Listing
 		Given user visit on the justdial home page
@@ -30,7 +30,6 @@ Feature: Car wash
 		
 	Scenario: Gym
 		Given User visit the justdial home page
-		#Then validate the title of the webpage
 		When Enter the location
 		When Scroll down to the GYM icon on homepage
 		And click on the gym button

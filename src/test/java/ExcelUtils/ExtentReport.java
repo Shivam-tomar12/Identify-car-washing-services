@@ -79,7 +79,7 @@ public class ExtentReport implements ITestListener {
  
 	public void onTestSkipped(ITestResult result) {
 		test = extent.createTest(result.getTestClass().getName());
-		//test.assignCategory(result.getMethod().getGroups());
+		
 		test.log(Status.SKIP, result.getName()+" got skipped");
 		test.log(Status.INFO, result.getThrowable().getMessage());
 	}

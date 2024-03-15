@@ -46,7 +46,7 @@ public class HomePage extends BasePage {
 	
 	
 	public void handleADD() {
-		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));   
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));   
 	      wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@aria-label='May be later']")));
 	      MayBe.click();
 	

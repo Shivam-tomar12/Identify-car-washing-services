@@ -18,9 +18,9 @@ public class CarService extends BasePage{
 		super(driver);
 	}
 	
-	@FindBy(xpath="//*[@id='filter_ul']/li[10]/div/div/span[2]")
+	@FindBy(xpath="//*[@class = 'jsx-abd03633235cbc61 ' and text() = 'All Filters']")
 	public WebElement allfilters;
-	
+
 	@FindBy(xpath="//*[@id='__next']/section/section/div/div[4]/aside/div/div[2]/div/div[1]/div[5]/span[3]")
 	public WebElement Scrollto;
 	
@@ -30,7 +30,7 @@ public class CarService extends BasePage{
 	@FindBy(xpath="//button[contains(text(), 'Apply Filters')]")
 	public WebElement applyButton;
 	
-	@FindBy(xpath="//div[@class='jsx-3349e7cd87e12d75 resultbox_title_anchor  line_clamp_1']")
+	@FindBy(xpath="//div[@class='jsx-3349e7cd87e12d75 resultbox_title_anchor  line_clamp_1 ']")
 	public List<WebElement> names;
 	
 	@FindBy(xpath="//div[@class='jsx-3349e7cd87e12d75 button_flare']")
@@ -43,12 +43,13 @@ public class CarService extends BasePage{
 	public List<WebElement> rating;
 	
 	public void click() {
+		
 		allfilters.click();
 	}
 	
 	public void applyFilter() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView();",Scrollto);
+        js.executeScript("arguments[0].scrollIntoView(true);",Scrollto);
         rating4.click();
         applyButton.click();    
         
@@ -66,6 +67,8 @@ public class CarService extends BasePage{
 	
 	public void getDetails() throws InterruptedException, IOException {
 		
+		
+		
 		String s = null,p = null, v= null;
 		
 		  
@@ -76,6 +79,7 @@ public class CarService extends BasePage{
 		  
 		  
 		  for(int j =0;j<5;j++) {
+			  
 				namesList.add(names.get(j).getText());
 				s=namesList.get(j);
 				
@@ -86,13 +90,10 @@ public class CarService extends BasePage{
 				
 				z=number.get(j);
 				Thread.sleep(2000);
-				
 				contactList.add(z.getAttribute("data-href"));
-				
 				p=contactList.get(j);
 				
 				
-				Thread.sleep(2000);
 				ratings.add(rating.get(j).getText());
 				v=ratings.get(j);
 				v = v.replaceAll("\\D", "");

@@ -34,7 +34,6 @@ import org.apache.logging.log4j.Logger;   //log4j
 public class testngBase {
 
 	public static WebDriver driver;
-	//public WebDriver driver;// parallel testing
 	public Logger logger;
 	static Properties p;
 	static ChromeOptions options=new ChromeOptions();
@@ -55,16 +54,14 @@ public class testngBase {
 		 if(p.getProperty("execution_env").equalsIgnoreCase("remote"))
 			{
 				DesiredCapabilities capabilities = new DesiredCapabilities();
-				ChromeOptions options = new ChromeOptions();
+			
 				options.addArguments("--disable-blink-features=AutomationControlled");
 				options1.addArguments("--disable-blink-features=AutomationControlled");
 				
 				//os
 				if (p.getProperty("os").equalsIgnoreCase("windows")) {
-					options.addArguments("--disable-blink-features=AutomationControlled");
 				    capabilities.setPlatform(Platform.WIN11);
 				} else if (p.getProperty("os").equalsIgnoreCase("mac")) {
-					options.addArguments("--disable-blink-features=AutomationControlled");
 				    capabilities.setPlatform(Platform.MAC);
 				} else {
 				    System.out.println("No matching OS..");
@@ -89,7 +86,7 @@ public class testngBase {
 		
 		 if(p.getProperty("execution_env").equalsIgnoreCase("local"))
 		{
-			//launching browser based on condition - locally
+			
 			switch(br.toLowerCase())
 			{
 			case "chrome": 
@@ -105,10 +102,8 @@ public class testngBase {
 			}
 		}
 		
-		
-		//driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		//driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+	
 		driver.get(p.getProperty("appURL"));
 		driver.manage().window().maximize();
 		return driver;
@@ -127,17 +122,20 @@ public class testngBase {
 	}
 	
 
-	public String randomeString()
-	{
-		String generatedString=RandomStringUtils.randomAlphabetic(5);
-		return generatedString;
-	}
 	
-	public String randomeNumber()
-	{
-		String generatedString=RandomStringUtils.randomNumeric(10);
-		return generatedString;
-	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -151,7 +149,7 @@ public class testngBase {
 		String targetFilePath=System.getProperty("user.dir")+"\\Testngreport\\screenshots\\" + tname + "_" + timeStamp + ".png";
 		File targetFile=new File(targetFilePath);
 		
-		sourceFile.renameTo(targetFile);
+		sourceFile.renameTo(targetFile);      // rename the source file to the targetfilepath and return the path
 			
 		return targetFilePath;
 

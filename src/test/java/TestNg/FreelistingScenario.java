@@ -38,7 +38,7 @@ public class FreelistingScenario extends testngBase {
 	@Test(priority=4,groups = {"smoke"})
 	public void validate_the_free_listing_webpage() {
 		F = new FreeListing(testngBase.getDri());
-	    String actTitle = "Free Listing - Just Dial - List In Your Business For Free";
+	    String actTitle = "Unlock Business Growth | Get Listed for FREE on Justdial";
 	    String ExpTitle = F.freeTitle();
 	    Assert.assertEquals(actTitle, ExpTitle);
 	  BaseClass.getlogger().info("*******Validate the free listing page*******");

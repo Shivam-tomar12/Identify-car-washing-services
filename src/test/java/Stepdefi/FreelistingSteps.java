@@ -36,7 +36,8 @@ public class FreelistingSteps {
 	@Then("validate the Free Listing webpage")
 	public void validate_the_free_listing_webpage() {
 		F = new FreeListing(BaseClass.getDriver());
-	    String actTitle = "Free Listing - Just Dial - List In Your Business For Free";
+		String actTitle = "Unlock Business Growth | Get Listed for FREE on Justdial";
+	    //String actTitle = "Free Listing - Just Dial - List In Your Business For Free";
 	    String ExpTitle = F.freeTitle();
 	    Assert.assertEquals(actTitle, ExpTitle);
 	}

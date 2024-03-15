@@ -19,11 +19,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
-import io.cucumber.java.AfterStep;
 import io.cucumber.java.Scenario;
 
 
@@ -41,16 +38,15 @@ public class BaseClass {
 		if(getProperties().getProperty("execution_env").equalsIgnoreCase("remote"))
 		{
 			DesiredCapabilities capabilities = new DesiredCapabilities();
-			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--disable-blink-features=AutomationControlled");
 			options1.addArguments("--disable-blink-features=AutomationControlled");
 			
 			//os
 			if (getProperties().getProperty("os").equalsIgnoreCase("windows")) {
-				options.addArguments("--disable-blink-features=AutomationControlled");
+				//options.addArguments("--disable-blink-features=AutomationControlled");
 			    capabilities.setPlatform(Platform.WIN11);
 			} else if (getProperties().getProperty("os").equalsIgnoreCase("mac")) {
-				options.addArguments("--disable-blink-features=AutomationControlled");
+				//options.addArguments("--disable-blink-features=AutomationControlled");
 			    capabilities.setPlatform(Platform.MAC);
 			} else {
 			    System.out.println("No matching OS..");

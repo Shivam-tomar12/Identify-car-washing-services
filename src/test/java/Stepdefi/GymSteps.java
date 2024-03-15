@@ -23,13 +23,6 @@ public class GymSteps {
 		H.handleADD();
 	}
 	
-	@Then("validate the title")
-	public void validate_the_title() {
-		H = new HomePage(BaseClass.getDriver());
-		String expTitle = "Find Businesses Near You on Local Search Engine - Justdial";
-	    String actTitle = H.Title();
-	    Assert.assertEquals(expTitle, actTitle);
-	}
 	
 	@When("Enter the location")
 	public void enter_the_location() {
